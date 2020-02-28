@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Horiseon SEO</title>
 </head>
-<!--All div tags were replaced by more appropriate objects.-->
+
 <body>
-    
+    <!--changed div to header for accessibility purposes-->
     <header>
         <h1>Hori<span class="seo">seo</span>n</h1>
-        <section>
+        <nav>
             <ul>
                 <li>
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
@@ -23,18 +23,33 @@
                     <a href="#social-media-marketing">Social Media Marketing</a>
                 </li>
             </ul>
-        </section>
+        </nav>
     </header>
-    <section>
+
+    <!-- Mark up for hero image -->
+    <section class="hero">
+        <!-- div creates transparent screen over image -->
+        <div class="heroDim"></div>
+        <!-- div positions text over both image and screen -->
+        <div class="heroText">
+            <h2>
+                Enhance Your 
+                <br>
+                 Online Presence
+            </h2>
+            <h5>With Horiseon Technologies</h3>
+        </div>
+        <!-- background image -->
         <img class="heroImage" src="./assets/images/digital-marketing-meeting.jpg" alt="Digital Marketing Meeting">
+        
     </section>
     
     
     <!--Main content section populated with sections-->
     <main class="content">
-        <!-- 
-            Existing class names were too specific and were acting more like IDs.
-            Previous class names, e.g. search-engine-optimization, were turned into IDs.
+        <!--
+            Replaced generic div elements with sections 
+            Replaced non-generic class names with contentSection class and turned previous class names to IDs 
         -->
         <section class="contentSection" id="search-engine-optimization">
             <img src="./assets/images/search-engine-optimization.jpg" alt="Search Engine Optimization" class="float-left" />
@@ -43,14 +58,14 @@
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
             </p>
         </section>
-        <section class="contentSection" id="online-reputation-management" id="online-reputation-management">
+        <section class="contentSection" id="online-reputation-management">
             <img src="./assets/images/online-reputation-management.jpg" alt="Online Reputation Management" class="float-right" />
             <h2>Online Reputation Management</h2>
             <p>
                 The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
             </p>
         </section>
-        <section class="contentSection" id="social-media-marketing" id="social-media-marketing">
+        <section class="contentSection" id="social-media-marketing">
             <img src="./assets/images/social-media-marketing.jpg" alt="Social Media Marketing" class="float-left" />
             <h2>Social Media Marketing</h2>
             <p>
@@ -60,7 +75,7 @@
     </main>
     
     
-    <!--Sidebar container and sections-->
+    <!--Sidebar is now an aside container and is populated with sections-->
     <aside class="benefits">
         <section id="benefit-lead">
             <h3>Lead Generation</h3>

@@ -4,10 +4,35 @@
     margin: 0;
 }
 
+/*  element styling */
+
 body {
     background-color: #d9dcd6;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Generic float operation */
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+
+
+/* Header and navigation stying */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -24,59 +49,74 @@ header h1 .seo {
     color: #d9dcd6;
 }
 
-header section {
+header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-header section ul {
+header nav ul {
     list-style-type: none;
 }
 
-header section ul li {
+header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
-}
-
-/* removed background image from CSS and put in HTML to allow an alt attribute to be assigned. */
-.heroImage {
+/*  
+    Hero image styling
+    removed background image from CSS and put in HTML to allow an alt attribute to be assigned. 
+*/
+.hero{
+    position: relative;
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
+
+}
+.heroImage {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
+/* Styling for transparent screen over image */
+.heroDim {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: .25;
+    z-index: 2;
+}
+/* styles and positions text over image */
+.heroText {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 80px;
+    font-size: 4em;
+    color:white;
+    text-align: center;
+    z-index: 3;
 }
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/* Styling main content container */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* styling for sections within main tag */
 .contentSection{
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 0px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -93,6 +133,7 @@ p {
     font-size: 36px;
 }
 
+/* Styling for benefits sidebar (aside) */
 
 .benefits {
     margin-right: 20px;
